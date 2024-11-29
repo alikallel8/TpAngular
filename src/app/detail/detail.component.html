@@ -1,0 +1,92 @@
+
+      <div class="">
+          <div class="card-container">
+          <div class="card">
+              <div class="front">
+                  <div class="cover">
+                      <img src="../../assets/images/rotating_card_thumb2.png"/>
+                  </div>
+                  <div class="user">
+                    <img class="img-circle" [src]="'../../assets/images/' + cv.path" alt="{{ cv.name }} {{ cv.firstname }}">
+                </div>
+                  <div class="content">
+                      <div class="main">
+                          <h3 class="name">{{cv.firstname}}, {{cv.name}}</h3>
+                          <p class="profession">{{cv.Job}}</p>
+                          <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                      </div>
+                      <div class="footer">
+                          <i class="fa fa-mail-forward"></i> Auto Rotation
+                      </div>
+                  </div>
+              </div> <!-- end front panel -->
+              <div class="back">
+                  <div class="header">
+                      <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                  </div>
+                  <div class="content">
+                      <div class="main">
+                          <h4 class="text-center">Job Description</h4>
+                          <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+  
+                          <div class="stats-container">
+                              <div class="stats">
+                                  <h4>235</h4>
+                                  <p>
+                                      Followers
+                                  </p>
+                              </div>
+                              <div class="stats">
+                                  <h4>114</h4>
+                                  <p>
+                                      Following
+                                  </p>
+                              </div>
+                              <div class="stats">
+                                  <h4>35</h4>
+                                  <p>
+                                      Projects
+                                  </p>
+                              </div>
+                          </div>
+  
+                      </div>
+                  </div>
+                  <div class="footer">
+                      <div class="social-links text-center">
+                          <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                          <a href="https://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                          <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                      </div>
+                  </div>
+              </div> <!-- end back panel -->
+          </div> <!-- end card -->
+      </div> <!-- end card-container -->
+      </div> <!-- end col sm 3 -->
+  
+      <script type="text/javascript">
+          $().ready(function(){
+              $('[rel="tooltip"]').tooltip();
+  
+              $('a.scroll-down').click(function(e){
+                  e.preventDefault();
+                  scroll_target = $(this).data('href');
+                  $('html, body').animate({
+                      scrollTop: $(scroll_target).offset().top - 60
+                  }, 1000);
+              });
+  
+          });
+  
+          function rotateCard(btn){
+              var $card = $(btn).closest('.card-container');
+              console.log($card);
+              if($card.hasClass('hover')){
+                  $card.removeClass('hover');
+              } else {
+                  $card.addClass('hover');
+              }
+          }
+  
+  
+      </script>
