@@ -7,6 +7,7 @@ import { CvComponent } from './cv/cv.component';
 import { ListeComponent } from './liste/liste.component';
 import { ItemComponent } from './item/item.component';
 import { DetailComponent } from './detail/detail.component';
+import { DefaultImagePipe } from './default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailComponent } from './detail/detail.component';
     CvComponent,
     ListeComponent,
     ItemComponent,
-    DetailComponent
+    DetailComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

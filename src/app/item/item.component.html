@@ -1,7 +1,7 @@
 <li class="list-group-tem"
 (click)="selectItem()"
 >
-    <img [src]="'../../assets/images/' + cvs.path" alt="{{ cvs.name }} {{ cvs.firstname }}" class="img-thumbnail">
+    <img [src]="cvs.path | DefaultImagePipe" alt="{{ cvs.name }} {{ cvs.firstname }}" class="img-thumbnail">
     {{ cvs.name }} {{ cvs.firstname }}
     
 </li>

@@ -10,7 +10,7 @@ export class ListeComponent {
   @Output() selectedItem = new EventEmitter();
 
   get firstThreeCVs() {
-    return this.cvs.slice(0, 3); // Get the first 3 elements from the `cvs` array
+    return this.cvs.slice(0, 4); // Get the first 3 elements from the `cvs` array
   }
   selectItem(selectedItem: any) {
     this.selectedItem.emit(selectedItem);

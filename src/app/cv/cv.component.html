@@ -3,6 +3,6 @@
         <app-liste (selectedItem)="selectItem($event)" [cvs]="cvs"></app-liste>
     </div>
     <div class="col-md-6 col-sm-9">
-        <app-detail [cv]="selectedCV"></app-detail>
+        <app-detail  *ngIf="show" [cv]="selectedCV"></app-detail>
     </div>
 </div>

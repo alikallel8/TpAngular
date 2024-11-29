@@ -7,7 +7,7 @@
                       <img src="../../assets/images/rotating_card_thumb2.png"/>
                   </div>
                   <div class="user">
-                    <img class="img-circle" [src]="'../../assets/images/' + cv.path" alt="{{ cv.name }} {{ cv.firstname }}">
+                    <img class="img-circle" [src]="cv.path | DefaultImagePipe" alt="{{ cv.name }} {{ cv.firstname }}">
                 </div>
                   <div class="content">
                       <div class="main">
