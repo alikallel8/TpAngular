@@ -18,6 +18,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DetailsComponent } from './tpcv/details/details.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     DetailsComponent,
     LoginComponent,
+    ObservableComponent,
   ],
   imports: [
     BrowserModule,
