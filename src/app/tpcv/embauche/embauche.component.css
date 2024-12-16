@@ -1,0 +1,17 @@
+.img-thumbnail
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+  .list-group-item:not(:last-child) {
+    margin-bottom: 10px;  /* Add space between items, but not for the last item */
+  }
+  
+  .list-group-item {
+    border-radius: 0.25rem;  /* Ensure rounded corners */
+    margin-bottom: 10px;  /* Space between list items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Light shadow for spacing */
+  }
+  

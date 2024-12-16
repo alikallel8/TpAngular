@@ -1,0 +1,7 @@
+<li class="list-group-tem"
+(click)="selectItem()"
+>
+    <img [src]="cv.path | DefaultImagePipe" alt="{{ cv.name }} {{ cv.firstname }}" class="img-thumbnail">
+    {{ cv.name }} {{ cv.firstname }}
+    
+</li>

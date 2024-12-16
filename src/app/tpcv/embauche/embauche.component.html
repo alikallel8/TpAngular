@@ -1,0 +1,23 @@
+<!--
+<div *ngIf="embaucheService.statusMessage" class="alert alert-info">
+    {{ embaucheService.statusMessage }}
+</div>
+-->
+
+
+  <div *ngIf="hired.length > 0">
+      <h2>Hired CVs</h2>
+    <ul class="list-group mx-4">
+      <li *ngFor="let cv of hired" class="list-group-item mb-3 rounded ">
+        <div class="d-flex justify-content-between">
+          <img [src]="cv.path | DefaultImagePipe" alt="{{ cv.name }} {{ cv.firstname }}" class="img-thumbnail">
+
+          <div class="justify-content-between">
+            <strong> {{ cv.firstname }} {{ cv.name }}</strong>
+            <p>ID: {{ cv.id }} | Job: {{ cv.job }}</p>
+          </div>
+          <button class="btn btn-danger" (click)="dismissCv(cv)">Dismiss</button>
+        </div>
+      </li>
+    </ul>
+  </div>

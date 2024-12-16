@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'DefaultImagePipe'
+  name: 'DefaultImagePipe',
+  
 })
 export class DefaultImagePipe implements PipeTransform {
 
-  transform(value: string, defaultImagePath: string = '../assets/images/potato.png'): string {
-    return value.trim() ? value : defaultImagePath; 
+  transform(path: string, defaultImagePath: string = '../assets/images/potato.png'): string {
+    return path.trim() ? path : defaultImagePath; 
 }
 
 

@@ -1,0 +1,33 @@
+<div *ngIf="cv" class="container mt-5">
+    <div class="row">
+      <!-- CV Image -->
+      <div class="col-md-4  text-center">
+        <img 
+          [src]="cv.path" 
+          class="img-fluid rounded shadow-sm" 
+          alt="{{ cv.firstname }} {{ cv.name }}"
+          style="max-height: 300px;">
+      </div>
+     
+      <!-- CV Details -->
+      <div class="col-md-8">
+        <h2 class="text-primary">{{ cv.firstname }} {{ cv.name }}</h2>
+        <hr>
+        <p class="lead">
+          <strong>Age:</strong> {{ cv.age }} <br>
+          <strong>CIN:</strong> {{ cv.cin }} <br>
+          <strong>Job:</strong> {{ cv.job }} <br>
+          <strong>ID:</strong> {{ cv.id }} <br>
+        </p>
+  
+        <p class="text-muted">
+          This section provides detailed information about the individual, including their job, age, and other personal details.
+        </p>
+  
+        <div class="mt-4">
+          <a routerLink="/" class="btn btn-outline-primary mx-2">Retour</a>
+          <button (click)="deleteCv()" class="btn btn-outline-danger mx-2">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>

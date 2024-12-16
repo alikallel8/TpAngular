@@ -6,11 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent {
-  @Input() cvs: any;
+  @Input() cv: any;
    
 @Output() selectedItem = new EventEmitter();
 selectItem() {
-    this.selectedItem.emit(this.cvs);
+    this.selectedItem.emit(this.cv);
    
   } 
 }

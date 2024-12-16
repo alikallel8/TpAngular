@@ -1,12 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Cv } from './cvmodel'; 
 
-@Component({
-  selector: 'app-cv',
-  templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class CvComponent {
-cvs = [
+export class CvService {
+  private cvs: Cv[] = [
     {
       id: 1,
       name: 'Kallel',
@@ -44,12 +43,20 @@ cvs = [
       path: '     '
     }
   ];
-   show= false;
 
-  selectedCV: any;
-  selectItem(cv: any) {
-    this.selectedCV = cv;
-    console.log(this.selectedCV);
-    this.show = true;
+  constructor() {}
+
+  getCvs(): Cv[] { 
+    return this.cvs;
+  }
+  getCv(id: number)
+  {
+    return this.cvs.find(cv => cv.id === id);
+  }
+  deleteCv(id: number): void {
+    const index = this.cvs.findIndex(cv => cv.id === id);
+    if (index !== -1) {
+      this.cvs.splice(index, 1);
+    } 
   }
 }

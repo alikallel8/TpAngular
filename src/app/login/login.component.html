@@ -1,0 +1,48 @@
+<form #formulaire="ngForm" (ngSubmit)="login(formulaire)">
+    <div class="container">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            ngModel
+            required
+            email
+            #emailInput="ngModel"
+          />
+          <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">
+            <div *ngIf="emailInput.errors?.['required']">
+              Email is required.
+            </div>
+            <div *ngIf="emailInput.errors?.['email']">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                id="password" 
+                type="password" 
+                name="password" 
+                #pwdInput="ngModel"
+                class="form-control" 
+                minlength="4"
+                required
+                ngModel>
+            <div  *ngIf="pwdInput.invalid && pwdInput.touched" class="text-danger">
+                Password must be at least 4 characters long.            </div>
+        </div>
+
+        <br>
+        <button 
+            type="submit" 
+            class="btn btn-success" 
+            [disabled]="!formulaire.valid">
+            Login
+        </button>
+    </div>
+</form>
