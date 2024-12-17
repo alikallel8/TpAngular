@@ -19,6 +19,7 @@ import { DetailsComponent } from './tpcv/details/details.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ObservableComponent } from './observable/observable.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ObservableComponent } from './observable/observable.component';
     BrowserAnimationsModule,  // Ajoutez ce module pour les animations de toast
     ToastrModule.forRoot(),    // Configurez ngx-toastr
     ROUTING,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   
   providers: [],

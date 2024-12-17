@@ -3,7 +3,7 @@
       <!-- CV Image -->
       <div class="col-md-4  text-center">
         <img 
-          [src]="cv.path" 
+          [src]="cv.path | DefaultImagePipe" 
           class="img-fluid rounded shadow-sm" 
           alt="{{ cv.firstname }} {{ cv.name }}"
           style="max-height: 300px;">

@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Subject } from 'rxjs';
+import { CvService } from 'src/app/cv.service';
+import { Cv } from 'src/app/cvmodel';
 
 @Component({
   selector: 'app-item',
@@ -6,11 +9,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent {
-  @Input() cv: any;
-   
-@Output() selectedItem = new EventEmitter();
-selectItem() {
-    this.selectedItem.emit(this.cv);
-   
+  @Input() cv!: Cv;
+   cvService=inject(CvService);
+item: any;
+affItem(item : any) {
+    //this.selectedItem.emit(this.cv);
+    this.cvService.selectItem(item);
+    console.log(item)
   } 
 }
