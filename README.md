@@ -13,7 +13,6 @@ A streamlined recruitment platform built with Angular that enables efficient CV 
 ## ✨ Features
 
 ### 📋 CV Management
-* **Browse & Filter** - Comprehensive CV listings with advanced filtering
 * **Detailed Profiles** - In-depth candidate information viewing
 * **Hiring Workflow** - Streamlined candidate hiring process
 * **Data Management** - Easy CV deletion and updates
