@@ -54,7 +54,7 @@ Each CV record contains:
 ### API Integration
 * RESTful API connectivity
 * Automatic fallback to FakeCvs service
-* Swagger documentation available at [Swagger API Explorer]()
+* Swagger API 👉 **[Swagger API Explorer](https://apilb.tridevs.net/explorer/)**
 
 ### Technologies Used
 ```json
@@ -73,14 +73,6 @@ npm install
 ng serve
 ```
 ---
-
-## 🚦 Getting Started
-
-### Prerequisites
-```bash
-Node.js (v14 or higher)
-Angular CLI 16.2.16
-```
 
 <div align="center">
   <sub>Exercise completed as part of Angular course</sub>
